@@ -13,6 +13,6 @@ let collegeName = null; // null literal
 let symbol = Symbol('unique'); // symbol literal
 console.table([name, age, isStudent, city, collegeName, symbol]);
 
-console.log(typeof undefined)
+console.log(typeof undefined) //undefined typed
 console.log(typeof null) // object (bug in js)
-console.log(typeof NaN)
+console.log(typeof NaN) // Number (Not a Number)

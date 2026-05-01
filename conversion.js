@@ -1,6 +1,7 @@
 let score = "hitesh";
 
-console.log(typeof score); // string
+console.log(typeof score); 
+// string
 
 let valueNumber = Number(score); 
 // converts string to number
@@ -22,7 +23,8 @@ booleanIsLoggedIn = Boolean(isLoggedIn);
 console.log(booleanIsLoggedIn); // false
 
 //let isLoggedIn = "hitesh";
-//console.log(Boolean(isLoggedIn)); // true because non-empty strings are truthy
+//console.log(Boolean(isLoggedIn)); 
+//true because non-empty strings are truthy
 
 // for Empty string it will be false
 let isLoggedIn = "";

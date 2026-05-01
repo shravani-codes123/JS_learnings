@@ -12,9 +12,9 @@ console.log(id);
 //Non-Primitive
 // object, array, function
 // call by reference
-const id = Symbol('123');
+
 const anotherId = Symbol('123');
-console.log(id === anotherId); // false, each symbol is unique
+
 
 let arr1 = [10, 20];
 let arr2 = [...arr1];  // spread operator
@@ -26,6 +26,7 @@ console.log(arr2);
 
 const heros = ["ironman", "spiderman", "thor"];
 
+
 let obj = {
     name : "Shravani",
     age : 21,
@@ -35,5 +36,5 @@ let obj = {
 const myFunction = function(){
     console.log("This is a function expression");
 }
-console.log(typeof myFunction);
-//what will be the 
+
+console.log(myFunction);
