@@ -35,10 +35,11 @@ const newArray = myArray.join();
 
 console.log(newArray); 
 // convert the array to a string, with elements separated by commas.
+
 console.log(typeof newArray);
  // output: string..
 
- const Arr = ["A","B", "C", "D", "E"];
+ const Arr = ["A","B","C","D","E"];
  console.log(Arr.slice(1,4));
 
  const Arr2 = Arr.slice(1,4);
