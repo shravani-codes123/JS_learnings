@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 01 </title>
+</head>
+<body>
+    <div class="btn">
+        <button class=" button">Hello world</button>
+    </div>
+    <button class="mbtn">MouseOverbtn</button>
+
+    <input class="inputText" type="text">
+
+    <div id="parent">
+        <button id="child">Click me</button>
+    </div>
+
+    <a id="link"   href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events">Click on me </a>
+
+
+    <ul id="task">
+        <li class="list"> I </li>
+        <li class="list">am </li>
+        <li class="list">learning</li>
+        <li class="list">javascript </li>
+        <li class="list">from</li>
+        <li class="list">Chai aur Code</li>
+    </ul>
+</body>
+    <script>
+
+        //Click Event
+        const button = document.querySelector('button')
+
+        button.addEventListener('click' , function(){
+            console.log("Button clicked!")
+        })
+
+        const mouseBtn = document.querySelector('.mbtn')
+        mouseBtn.addEventListener('click' , function(){
+            console.log("MouseOver btn")
+        })
+
+       //Bubble events
+
+       document.querySelector("#parent").addEventListener('click' , () =>{
+             console.log("Parent")
+       }, false)
+
+       document.querySelector("#child").addEventListener('click', ()=>{
+            console.log("child")
+            event.stopPropagation();// only child no parent
+       }, false)
+
+       /*document.querySelector('#link').addEventListener('click', ()=>{
+          console.log('Clickedm on link')
+       })*/
+       
+       //use preventDefault
+
+        document.querySelector('#link').addEventListener('click', ()=>{
+          event.preventDefault();
+          console.log('Linked wont opened now!')
+       })
+
+       document.querySelector('#task').addEventListener('click',()=>{
+           console.log("hey there");
+       })
+       //we need parent node
+
+       /*document.querySelector('#task').addEventListener('click',function(e){
+           console.log(e.target.parentNode);
+
+           let remove= e.target.parentNode;
+            remove.parentNode.removeChild(remove)//deleting all childs
+       })*/
+         
+       //Removing the nodes one by one
+       document.querySelector('#task').addEventListener('click',function(e){
+              
+        if(e.target.tagName === 'LI'){
+            e.target.remove();
+        }
+       })
+            /* Method          | Works On              |
+            | --------------- | -----------------|
+            | `removeChild()` | Parent removes child   |
+            | `remove()`      | Element removes itself |*/
+
+
+
+    </script>
+</html>

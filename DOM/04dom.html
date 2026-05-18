@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="language">
+        <li>javaScript</li>
+
+    </div>
+</body>
+<script>
+    function addLanguage(langname){
+        const li = document.createElement('li')
+        li.innerHTML = `${langname}`
+        document.querySelector('.language')
+        appendChild(li)
+
+        addLanguage("python")
+        addLanguage("javascript")
+
+    }
+</script>
+</html>
